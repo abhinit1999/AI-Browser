@@ -3,7 +3,7 @@ from app.routes import router
 from fastapi.middleware.cors import CORSMiddleware
 
 
-app = FastAPI(title="LangChain Tool Graph API")
+app = FastAPI(title="AI-Browser")
 app.include_router(router)
 app.add_middleware(
     CORSMiddleware,
