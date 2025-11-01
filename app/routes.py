@@ -10,6 +10,9 @@ tools = get_tools()
 llm_with_tools = get_model(tools)
 graph = build_graph(llm_with_tools, tools)
 
+@router.get("/")
+def Home():
+    return {"message":"THis is the Home page of AI Browser"}
 @router.post("/query")
 def query_graph(payload: dict):
     user_input = payload.get("message", "")
